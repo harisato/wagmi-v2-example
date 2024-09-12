@@ -17,6 +17,7 @@ import { WatchContractEvents } from "../components/WatchContractEvents";
 import { WatchPendingTransactions } from "../components/WatchPendingTransactions";
 import { WriteContract } from "../components/WriteContract";
 import { WriteContractPrepared } from "../components/WriteContractPrepared";
+import { MintNFT } from "../components/MintNFT";
 
 function Page() {
   const { isConnected } = useAccount();
@@ -43,6 +44,14 @@ function Page() {
           <hr />
           <h2>Block Number</h2>
           <BlockNumber />
+          <br />
+          <hr />
+          <h2>Mint NFT token</h2>
+          <MintNFT />
+          <br />
+          <hr />
+          <h2>Create IP Asset</h2>
+          <WriteContract />
           <br />
           <hr />
           <h2>Read Contract</h2>
@@ -80,10 +89,7 @@ function Page() {
           <h2>Watch Pending Transactions</h2>
           <WatchPendingTransactions />
           <br />
-          <hr />
-          <h2>Write Contract</h2>
-          <WriteContract />
-          <br />
+
           <hr />
           <h2>Write Contract (Prepared)</h2>
           <WriteContractPrepared />

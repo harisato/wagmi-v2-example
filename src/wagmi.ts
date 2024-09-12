@@ -1,5 +1,6 @@
 import { http, createConfig } from "wagmi";
 import { mainnet, sepolia } from "wagmi/chains";
+import { iliad } from "./iliad";
 import { coinbaseWallet, injected, walletConnect } from "wagmi/connectors";
 import getConfig from "next/config";
 
@@ -17,12 +18,13 @@ const connectors =
     : [];
 
 export const config = createConfig({
-  chains: [mainnet, sepolia],
+  chains: [mainnet, sepolia, iliad],
   connectors,
   ssr: true,
   transports: {
     [mainnet.id]: http(),
     [sepolia.id]: http(),
+    [iliad.id]: http(),
   },
 });
 
